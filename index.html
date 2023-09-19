@@ -8,50 +8,86 @@
       img {
         border-radius: 2rem;
       }
-      ul li {
+      .container {
         display: flex;
         flex-direction: column;
         text-align: center;
+
+        border: 1px solid black;
+        border-radius: 2rem;
+        padding: 1rem;
+        margin: 1rem;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
       }
-      ul {
+      .list {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
       }
       h1,
-      p,
       h2 {
         text-align: center;
+      }
+      body {
+        background-image: url(./images/background.webg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-size: 600;
+      }
+      .container {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 34px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+      .container a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.35);
+        display: flex;
+        flex-direction: column;
+      }
+      .container:hover {
+        background-color: white;
+        transition: all 0.3s ease;
+      }
+      a:hover {
+        color: brown;
       }
     </style>
   </head>
   <body>
     <h1>Odin Recipes</h1>
-    <p>
-      It is a project from
-      <a href="https://www.theodinproject.com/lessons/foundations-recipes"
-        >The Odin Project</a
-      >.
-    </p>
+
     <h2>HOT PICK!:</h2>
-    <ul>
-      <li>
-        <a href="./recipes/pho.html">Pho</a>
-        <img src="./images/pho.webp" alt="Pho" width="300" height="200" />
-      </li>
-      <li>
-        <a href="./recipes/pizza.html">Pizza</a>
-        <img src="./images/pizza.webp" alt="Pizza" width="300" height="200" />
-      </li>
-      <li>
-        <a href="./recipes/banhmi.html">Banh Mi</a>
-        <img
-          src="./images/banhmi.webp"
-          alt="banh mi"
-          width="300"
-          height="200"
-        />
-      </li>
-    </ul>
+    <div class="list">
+      <div class="container">
+        <a href="./recipes/pho.html"
+          >Pho
+          <img src="./images/pho.webp" alt="Pho" width="300" height="200" />
+        </a>
+        <ul></ul>
+      </div>
+      <div class="container">
+        <a href="./recipes/pizza.html"
+          >Pizza
+          <img src="./images/pizza.webp" alt="Pizza" width="300" height="200" />
+        </a>
+      </div>
+      <div class="container">
+        <a href="./recipes/banhmi.html"
+          >Banh Mi
+          <img
+            src="./images/banhmi.webp"
+            alt="banh mi"
+            width="300"
+            height="200"
+          />
+        </a>
+      </div>
+    </div>
   </body>
 </html>
