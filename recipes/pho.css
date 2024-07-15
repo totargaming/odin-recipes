@@ -92,10 +92,13 @@ p, li {
 
 .information, .additional-info {
     display: flex;
+    min-width: 100%;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
+    gap: 40px;
     background-color: #ffd525;
+    flex-wrap: wrap;
 }
 
 .information > *, .time {
@@ -114,6 +117,18 @@ p, li {
     text-align: center;
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .information > *, .time {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .information > *, .time {
+        width: 100%;
+    }
+}
 .time {
     width: 10%;
 }
@@ -127,6 +142,14 @@ p, li {
     overflow: hidden;
     max-height: 5rem;
     align-items: center;
+}
+
+.hover {
+    transition: max-height 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    max-height: 5rem;
+    align-items: center;
+    cursor: pointer;
 }
 
 .hover:hover {
